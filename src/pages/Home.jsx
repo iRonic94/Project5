@@ -1,10 +1,10 @@
 import Cards from "../components/Cards";
 import Banner from "../components/Banner";
 
-function Home() {
+function Home({ data }) {
     return <div className="home">
         <Banner />
-        <Cards />
+        <Cards data={data} />
     </div>
 }
 export default Home;
