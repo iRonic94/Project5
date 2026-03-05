@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom'
 import './App.scss';
 import Home from './pages/Home'
@@ -8,17 +7,7 @@ import Navbar from './components/Navbar';
 
 
 function App() {
-  const [data, setData] = useState(null);
 
-  useEffect(() => {
-    fetch('/data/data.json')
-      .then(response => response.json())
-      .then(data => setData(data))
-  }, []);
-
-  if (!data) {
-    return <div>Loading...</div>;
-  }
   return (
     <>
       <div className="header">
@@ -26,9 +15,9 @@ function App() {
       </div>
       <div className="main">
         <Routes>
-          <Route path="/" element={<Home data={data} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Details/:id" element={<Details data={data} />} />
+          <Route path="/Details/:id" element={<Details />} />
         </Routes>
       </div>
       <div className="footer">
