@@ -1,13 +1,9 @@
-let data = [];
-fetch('/data/data.json').then(res => res.json()).then(val => data = val);
+let data = fetch('/data/data.json').then(res => res.json());
 
 export function getLocations() {
-    return data;
+    return data
 }
 
 export function getLocation(id) {
-    const detail = data.find(place => place.id === id);
-    return detail;
+    return data.then(val => val.find(place => place.id === id));
 }
-
-console.log(data);
