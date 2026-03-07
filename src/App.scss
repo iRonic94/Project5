@@ -1,3 +1,9 @@
+$light-blue: #61dafb;
+$dark-blue: #282c34;
+$black-trans-25: #00000040;
+$light-gray: #f6f6f6;
+$light-red: #ff6060;
+
 .App {
   text-align: center;
 }
@@ -14,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $dark-blue;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +31,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: $light-blue;
 }
 
 @keyframes App-logo-spin {
@@ -38,8 +44,8 @@
   }
 }
 
-header {
-  padding: 50px;
+#root {
+  padding: 50px 400px 10px 400px;
 }
 
 .navbar {
@@ -59,31 +65,94 @@ header {
     font-weight: 500;
     font-size: 24px;
   }
-}
 
-.banner-main {
-  display: flex;
-  justify-content: center;
-  padding: 80px;
-
-  .banner-image {
-    background-color: blue;
-    width: 800px;
-    height: 100px;
-    border-radius: 25px;
+  .active {
+    text-decoration: underline;
   }
 }
 
-.cards-main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
 
-  .cards-item {
-    background-color: red;
-    width: 200px;
-    height: 200px;
+  .banner-main {
+    display: flex;
+    justify-content: center;
+
+    .banner-image {
+      width: 100%;
+      height: 350px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+        box-shadow: 0px 0px 5px 0px $black-trans-25;
+        filter: brightness(50%);
+      }
+    }
+
+    .bannerTxt {
+      position: absolute;
+      font-family: 'Montserrat';
+      display: flex;
+      width: 100%;
+      height: 350px;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      color: white;
+      text-shadow: 0px 0px 5px black;
+      font-weight: bold;
+    }
+  }
+
+  .cards-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 0px 50px 0px;
+    justify-items: center;
+    background-color: $light-gray;
+    border-radius: 25px;
+
+
+    .cards-item {
+      background: linear-gradient(180deg, $light-red 0%, $light-red 42%, $light-red 99.99%, $light-red 100%);
+      border-radius: 10px;
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+
+  .banner-main {
+    display: flex;
+    justify-content: center;
+
+    .banner-image {
+      width: 100%;
+      height: 350px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+        box-shadow: 0px 0px 5px 0px $black-trans-25;
+      }
+    }
   }
 }
 
