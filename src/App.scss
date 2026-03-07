@@ -122,10 +122,18 @@ $light-red: #ff6060;
 
 
     .cards-item {
+      display: flex;
+      align-items: flex-end;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
       background: linear-gradient(180deg, $light-red 0%, $light-red 42%, $light-red 99.99%, $light-red 100%);
       border-radius: 10px;
       width: 350px;
       height: 350px;
+      padding: 10px;
     }
   }
 }
@@ -175,5 +183,43 @@ $light-red: #ff6060;
 
   .carousel-buttons {
     width: 100%;
+  }
+}
+
+.dropdown {
+  width: 100%;
+  margin-bottom: 20px;
+
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff6060;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f7f7f7;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+  }
+
+  .show {
+    max-height: 200px;
+    padding: 15px;
+    overflow: unset;
   }
 }
