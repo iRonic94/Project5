@@ -12,9 +12,7 @@ function Dropdown() {
                 <span className={`arrow ${show ? "open" : ""}`} onClick={showContent}><img src={arrow} alt="arrow"></img></span>
             </div>
             <div className={`dropdown-content ${show ? "show" : ""}`}>
-                test1
-                test2
-                test3
+                text
             </div>
         </div>
     );

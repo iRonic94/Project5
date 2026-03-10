@@ -6,6 +6,9 @@ function About() {
     return <div className="about">
         <Banner banner={bannerAbout} />
         <Dropdown />
+        <Dropdown />
+        <Dropdown />
+        <Dropdown />
     </div>
 }
 export default About;

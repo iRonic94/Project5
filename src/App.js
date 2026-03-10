@@ -1,9 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import './App.scss';
+import Navbar from './components/Navbar';
 import Home from './pages/Home'
 import About from './pages/About'
 import Details from './pages/Details';
-import Navbar from './components/Navbar';
+import Footer from './pages/Footer'
 
 
 function App() {
@@ -20,8 +21,7 @@ function App() {
           <Route path="/Details/:id" element={<Details />} />
         </Routes>
       </div>
-      <div className="footer">
-      </div>
+      <Footer />
     </>
   );
 }
