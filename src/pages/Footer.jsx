@@ -1,8 +1,9 @@
-import footerImg from '../assets/desktopFooter.png';
+import logo from '../assets/logoFooter.png';
 function Footer() {
     return (
         <div className="footer">
-            <img src={footerImg} className="footerImg"></img>
+            <span className="logoFooter"><img src={logo} alt="logo"></img></span>
+            <span className="copyrightFooter">© 2020 Kasa. All rights reserved</span>
         </div>
     );
 }
