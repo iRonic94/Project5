@@ -11,9 +11,9 @@ function App() {
 
   return (
     <>
-      <div className="header">
+      <header>
         <Navbar />
-      </div>
+      </header>
       <div className="main">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,7 +21,10 @@ function App() {
           <Route path="/Details/:id" element={<Details />} />
         </Routes>
       </div>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
+
     </>
   );
 }
