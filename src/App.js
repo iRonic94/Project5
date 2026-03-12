@@ -8,23 +8,23 @@ import Footer from './pages/Footer'
 
 
 function App() {
-
   return (
     <>
       <header>
         <Navbar />
       </header>
-      <div className="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Details/:id" element={<Details />} />
-        </Routes>
-      </div>
+      <main>
+        <div className="main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Details/:id" element={<Details />} />
+          </Routes>
+        </div>
+      </main>
       <footer>
         <Footer />
       </footer>
-
     </>
   );
 }
