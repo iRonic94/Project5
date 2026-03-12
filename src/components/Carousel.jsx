@@ -18,12 +18,11 @@ function Carousel({ detail }) {
         }
     }
     return (
-        <div className="carousel">
-            <div className="carousel-buttons">
-                <img src={backArrow} alt="back" className="back" onClick={back}></img>
-                <img src={nextArrow} alt="next" className="next" onClick={next}></img>
-            </div>
+        <div className="carousel-container">
             <img src={`${detail.pictures[index]}`} className="img-places" alt="accommodation" ></img>
+            <span className="counter">{index + 1}/{detail.pictures.length}</span>
+            <img src={backArrow} alt="back" className="back" onClick={back}></img>
+            <img src={nextArrow} alt="next" className="next" onClick={next}></img>
         </div>
     );
 }
