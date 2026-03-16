@@ -9,9 +9,6 @@ function Home() {
     useEffect(() => {
         getLocations().then(setData);
     }, [])
-    // if(!data){
-    //     <
-    // }
     return <div className="home">
         <Banner banner={bannerHome} bannerTxt="At home, everywhere, and anywhere" />
         <Cards data={data} />
