@@ -11,10 +11,12 @@ function App() {
   return (
     <>
       <header>
-        <Navbar />
+        <div className="container">
+          <Navbar />
+        </div>
       </header>
       <main>
-        <div className="main">
+        <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/About" element={<About />} />
