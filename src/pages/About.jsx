@@ -24,8 +24,8 @@ function About() {
 
     return <div className="about">
         <Banner banner={bannerAbout} />
-        {aboutArr.map(item => (
-            <Dropdown title={item.title} text={item.text} />
+        {aboutArr.map((item, i) => (
+            <Dropdown key={i} title={item.title} text={item.text} />
         ))}
 
     </div>

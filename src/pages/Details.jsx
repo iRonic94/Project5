@@ -12,7 +12,7 @@ function Details() {
     const [detail, setDetail] = useState(null);
 
     useEffect(() => {
-        getLocation(id).then(setDetail);
+        getLocation(id).then(setDetail).catch(console.log("Didn't find the location!"));
     }, [id])
 
     if (!detail) {
@@ -28,7 +28,7 @@ function Details() {
                 <div className="location-detail">
                     <h1>{detail.title}</h1>
                     <h2>{detail.location}</h2>
-                    <div className="tags-detail">{detail.tags.map(Tagname => <span className="tag">{Tagname}</span>)}</div>
+                    <div className="tags-detail">{detail.tags.map((Tagname, id) => <span key={id} className="tag">{Tagname}</span>)}</div>
                 </div>
                 <div className="host-detail">
                     <div className="host-name-detail">
@@ -36,8 +36,8 @@ function Details() {
                         <span className="picture-host"><img src={detail.host.picture} alt={detail.host.name}></img></span>
                     </div>
                     <div className="rating">
-                        {stars.map((star) => (
-                            <img src={star < rating ? FullStar : EmptyStar} alt="star"></img>
+                        {stars.map((star, i) => (
+                            <img key={i} src={star < rating ? FullStar : EmptyStar} alt="star"></img>
                         ))}
 
                     </div>
@@ -45,7 +45,7 @@ function Details() {
             </div >
             <div className="dropdown-container">
                 <Dropdown title="Description" text={detail.description} />
-                <Dropdown title="Amenities" text={detail.equipments.map(item => <span>{item}<br /></span>)} />
+                <Dropdown title="Amenities" text={detail.equipments.map((item, id) => <span key={id} >{item}<br /></span>)} />
             </div>
         </>
     );
