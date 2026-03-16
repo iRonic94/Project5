@@ -233,7 +233,7 @@ main {
     & span {
       display: flex;
       border: 1px solid $light-red;
-      border-radius: 25px;
+      border-radius: 10px;
       align-items: center;
       justify-content: center;
       width: 150px;
@@ -361,5 +361,114 @@ footer {
   .container {
     max-width: 768px;
     padding: 20px 16px;
+  }
+
+  .home {
+    display: grid;
+    grid-template-rows: 200px;
+
+    .cards-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .img-logo {
+    width: 145px;
+  }
+
+  .navbar {
+    .navbar-menu {
+      gap: 20px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+    }
+  }
+
+  .home .banner-main .banner-image img {
+    height: 50%;
+  }
+
+  .home .banner-main .bannerTxt {
+    width: 85%;
+    height: 20%;
+    font-size: 32px;
+  }
+
+  .carousel-container {
+    height: 50%;
+
+    .img-places {
+      height: 200px;
+    }
+  }
+
+  .carousel-container .back,
+  .carousel-container .next {
+    width: 20px;
+  }
+
+  .main-detail {
+    flex-direction: column;
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .rating img {
+    width: 20px;
+  }
+
+  .main-detail .host-detail {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-items: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+    justify-content: space-between;
+  }
+
+  .main-detail .host-detail .host-name-detail {
+    width: 160px;
+  }
+
+  .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about .banner-main .banner-image img {
+    height: 50%;
+  }
+
+  .about {
+    display: grid;
+    grid-template-rows: 200px;
+  }
+
+  .error-container {
+    gap: 100px;
+
+    .error-number {
+      font-size: 100px;
+    }
+
+    .error-message {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .redirect-home {
+      font-size: 12px;
+    }
   }
 }
