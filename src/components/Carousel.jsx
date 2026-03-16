@@ -21,8 +21,8 @@ function Carousel({ detail }) {
         <div className="carousel-container">
             <img src={`${detail.pictures[index]}`} className="img-places" alt="accommodation" ></img>
             <span className="counter">{index + 1}/{detail.pictures.length}</span>
-            <img src={backArrow} alt="back" className="back" onClick={back}></img>
-            <img src={nextArrow} alt="next" className="next" onClick={next}></img>
+            {detail.pictures.length > 1 && <img src={backArrow} alt="back" className="back" onClick={back}></img>}
+            {detail.pictures.length > 1 && <img src={nextArrow} alt="next" className="next" onClick={next}></img>}
         </div>
     );
 }
